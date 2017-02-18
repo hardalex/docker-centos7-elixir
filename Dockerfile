@@ -10,12 +10,7 @@ RUN yum reinstall -y glibc-common
 # Set the locale(en_US.UTF-8)
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
-
-# Set the locale(ja_JP.UTF-8)
-#ENV LANG ja_JP.UTF-8
-#ENV LANGUAGE ja_JP:ja
-#ENV LC_ALL ja_JP.UTF-8
+#ENV LC_ALL en_US.UTF-8
 
 # Set app env
 ENV HOME /root
