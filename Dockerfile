@@ -28,7 +28,7 @@ WORKDIR /usr/local/src
 RUN yum install -y gcc gcc-c++ make openssl-devel ncurses-devel && yum clean all
 RUN yum install -y epel-release.noarch && yum clean all
 RUN yum install -y http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_18.1-1~centos~7_amd64.rpm && yum clean all
-RUN yum install -y sudo wget git tar bzip2 incron vim nodejs npm && yum clean all
+RUN yum install -y sudo wget git tar bzip2 incron vim nodejs npm mysql && yum clean all
 ########## MIDDLEWARE ##########
 
 
