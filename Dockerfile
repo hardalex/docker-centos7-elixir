@@ -24,7 +24,10 @@ RUN yum install -y gcc gcc-c++ make openssl-devel ncurses-devel && yum clean all
 RUN yum install -y epel-release.noarch && yum clean all
 RUN yum install -y http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_18.1-1~centos~7_amd64.rpm && yum clean all
 RUN yum install -y sudo wget git tar bzip2 incron vim mysql && yum clean all
-RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash && export NVM_DIR="/root/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
+RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash 
+RUN export NVM_DIR="/root/.nvm" 
+RUN [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+RUN nvm install node
 ########## MIDDLEWARE ##########
 
 
