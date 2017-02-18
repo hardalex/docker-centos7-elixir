@@ -40,12 +40,3 @@ RUN git clone https://github.com/elixir-lang/elixir.git
 WORKDIR /usr/local/src/elixir
 RUN git checkout refs/tags/v${ELIXIR_VERSION}
 RUN make clean install
-
-# Build Mix Tasks to use Dialyxir
-WORKDIR /usr/local/src
-RUN git clone https://github.com/jeremyjh/dialyxir.git
-WORKDIR /usr/local/src/dialyxir
-RUN mix archive.build
-RUN yes | mix archive.install && mix dialyzer.plt
-########## ELIXIR ##########
-
